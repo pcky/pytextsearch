@@ -22,9 +22,7 @@ def print_rows(word,text_index,text_lines):
     for line_id in text_index.get(word, []):
         line =  text_lines[line_id]
         if not line_id == last_line_id:
-            print '  [Line:' + (5 - len(str(line_id + 1))) * ' ' + str(line_id + 1) + 
-']  
-' + line
+            print '  [Line:' + (5 - len(str(line_id + 1))) * ' ' + str(line_id + 1) + ']  ' + line
             print 16 * ' ' + build_pointers(word,line)
         i += 1
         last_line_id = line_id     
